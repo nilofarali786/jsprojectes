@@ -1,0 +1,47 @@
+
+.card{
+
+    width: 100%;
+    
+
+    margin:  auto;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap:30px;
+    
+    
+    
+}
+.box{
+      width: 90%;
+      border: 1px solid black;
+      margin: auto;
+      height: 70vh;
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+}
+.card img{
+    align-items: center;
+    border-radius: 6px;
+    background-size: cover;
+}
+.ti{
+    
+    text-align: center;
+}
+.btn{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+.dc{
+  text-align: center;
+  font-weight: 600;
+}
