@@ -1,0 +1,41 @@
+.main-slider{
+
+
+
+    border: 2px solid black;
+    width: 70%;
+    margin: auto;
+    position: relative;
+    height: 70vh;
+   
+
+}
+#slider{
+    width: 100%;
+    position:absolute;
+   transition: 1s;
+}
+  #slider img{
+
+  width: 100%;
+  overflow: hidden;
+  height:100% ;
+
+}
+.btn-div{
+
+  display: flex;
+   
+  
+  
+}
+.btn{
+  background-color: rgb(13, 13, 13);
+  color: rgb(180, 155, 155);
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  
+  z-index: 1;
+}
+#btn

@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet"  href="./index2.css">
+   <title>Document</title>
+</head>
+<body>
+   <div class="main-slider">
+    <div id="slider">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxljCiU3pRUXpw-39aklTNk7BDV3G9Dn7ocw&s">
+    </div>
+    
+   </div>
+   <div  class="btn-div">
+<button   class="btn1" id="btn1">></button>
+
+ <button   class="btn2" id="btn2"><</button>
+   </div>
+   <script>
+
+     let slider= document.querySelectorAll("#slider")
+     let prv=document.querySelector("#btn1")
+     let next=document.querySelector("#btn2")
+       console.log(slider)
+   let counter=0
+       
+   slider.forEach((slide,index)=>{
+
+      slide.style.left=`${index * 100}%`
+   })    
+
+//       function image(){
+//    slider.forEach((sl,i)=>{
+
+//     sl.style.transform=`transalteX(${counter * 100}%)`
+//  })
+// }
+
+//   prv.addEventListener("click",function(){
+//   // alert("p")
+//          counter--
+//          image()
+
+//   })
+//   next.addEventListener("click",function(){
+//   // alert("n")
+// counter++
+// image()
+
+// })
+//    </script>
+</body>
+</html>
