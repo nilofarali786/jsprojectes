@@ -1,0 +1,39 @@
+.about{
+
+
+    width:90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+
+
+}
+.left{
+    position: relative;
+   flex-basis: 45%;
+   
+}
+.right{
+    flex-basis: 45%;
+}
+.right p{
+
+    font-size: 20px;
+    line-height: 23px;
+}
+ .img1{
+    
+    width: 100%;
+
+}
+.img2{
+    position: absolute;
+      top:50%;
+    left:50%;
+      transform: translate(-50% -50%);
+    width: 10%;
+    height: 10%;
+    border-radius: 120px;
+}

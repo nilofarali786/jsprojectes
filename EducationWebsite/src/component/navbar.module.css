@@ -1,0 +1,105 @@
+body{
+   margin: 0;
+   padding: 0;
+   
+   box-sizing: border-box;
+}
+.container{
+
+    background-color: #333;
+    color: aliceblue;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3%;
+    position: fixed;
+    top:0;
+    z-index: 1;
+}
+.container .logo{
+    display: inline;
+    width: 120px;
+}
+.container .logo img{
+
+
+    width: 70px;
+    background-color: #333;
+    height: 70px;
+    border-radius: 70px;
+}
+.container ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin-right: 50px;
+    color: aliceblue;
+}
+.container ul li link {
+    text-decoration: none;
+    color: white;
+
+}
+.container li button{
+    border-style: none;
+    padding: 5px;
+    width: 120px;
+    border-radius: 5px;
+    
+}
+.container .icon{
+     font-size: 30px;
+}
+
+
+
+@media (max-width: 670px){
+
+.container .logo img{
+
+    width: 50px;
+    height: 50px;
+   margin-top:30px;
+   
+
+}
+ .container{
+    width: 40%;
+    display: block;
+    height: 100%;
+    background-color: aliceblue;
+    position: fixed;
+    left: 0;
+ }
+
+.container ul  {
+    display: none;
+     width: 200px;
+    color:antiquewhite;
+    
+      
+    
+
+}
+.container ul li {
+    padding: 12px;
+    text-decoration: none;
+    color: aliceblue;
+    
+    
+}
+.container .icon{
+    position: fixed;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+ 
+ul .hidden{
+    display: block;
+}
+}
+    
+
+
