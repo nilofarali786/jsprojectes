@@ -1,0 +1,129 @@
+.banner{
+
+
+    background-color: #feecef;
+    width: 100%;
+   
+}
+.ban{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 0 120px;
+}
+.ban .image {
+    width: 400px;
+    height: 400px;
+}
+.ban .image img{
+    width: 100%;
+}
+.ban .content p{
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.ban .content h3{
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 400;
+    color: #252525;
+    margin-bottom: 4px;
+}
+.ban .btn{
+
+    background-color:white;
+    color: #252525;
+    cursor: pointer;
+    font-weight: 500;
+    line-height: 30px;
+    width: 120px;
+    margin-top: 20px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    transition: 0.4s;
+}
+.ban .btn:hover{
+
+    background-color:#19c880 ;
+    color: white;
+}
+@media (max-width:900px) {
+  .banner{
+    height: auto;
+  }  
+    .ban{
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 0 60px;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .ban .image  {
+
+        width: 100%;
+        margin: 0 auto;
+        
+    }
+.ban .image img{
+
+    width: 400px;
+    height: 400px;
+}
+    .content {
+
+    max-width: 100%;
+    margin: auto;
+    flex-wrap: wrap;
+    margin: 0 30px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap:10px
+    
+    }
+    
+    .ban .content h3{
+
+        font-size:30px ;
+    }
+
+        
+    }
+    @media(max-width:550px){
+
+        .ban{
+            flex-wrap: wrap;
+            flex-direction: column;
+            margin: 0 60px;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        
+        }
+
+
+        .ban .image  {
+
+            width: 100%;
+            margin: 0 auto;
+            
+        }
+        .ban .content h3{
+
+            font-size:20px ;
+        }
+        .ban .image img{
+
+            width: 300px;
+            height: 300px;
+        }
+    }

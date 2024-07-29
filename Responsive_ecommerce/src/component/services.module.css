@@ -1,0 +1,60 @@
+.container{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 50px;
+    max-width: 80%;
+    margin: auto;
+    border-bottom: 1px solid #dcdcdc;
+    height: 20vh;
+}
+
+
+
+.container .services{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    
+}
+.services .img{
+           font-size: 30px;
+    font-weight: 500;
+    color: #19c880;
+}
+.services h4{
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.services p{
+    color: gray;
+}
+@media (max-width:900px){
+
+
+    .container{
+      height: auto;
+    width: auto;
+   
+    display: grid;
+grid-template-columns: repeat(2 ,1fr);
+grid-template-rows: repeat(2,1fr);
+gap:15px;
+        
+    }
+    
+    
+     .services h4{
+
+    font-size: 15px;
+ 
+        
+    }
+.container .services{
+   max-width: 100%;
+}
+
+}

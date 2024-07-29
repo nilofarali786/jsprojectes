@@ -1,0 +1,161 @@
+.container{
+
+    
+    width: 100%;
+}
+ .product{
+
+
+margin: 20px 60px;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+ grid-template-rows: repeat(2,1fr);
+ gap:10px;
+    
+
+}
+.product .card  .img img{
+
+   width: 250px;
+   height: 250px;
+   border-radius: 3px;
+
+}
+.card .img img{
+    position: relative;
+}
+  .card{
+    position: relative;
+  }
+.card .img {
+    position: relative;
+}
+     .btn  {
+    position: absolute;
+    background-color: red;
+    width: 60px;
+    padding: 6px;
+    border-style: none;
+    color: aliceblue;
+    margin-left: 170px;
+    margin-top: -230px;
+    
+ }
+
+ .card .img .btn::before{
+     position: absolute;
+     content: "";
+ border-width: 5px ;
+ border-color: rgb(243, 17, 17) transparent transparent red ;
+ left: 10px;
+border-style: solid;
+top:100%
+ }
+
+   
+ .product .card .deatailes{
+   
+    
+
+
+display: flex;
+    align-items: center;
+justify-content: space-around;
+gap:3px;
+position: absolute;
+bottom: 80px;
+margin:0  auto ;
+transition: 3s;
+
+visibility: hidden;
+    
+}
+ .deatailes .icon{
+   width: 80px;
+    height: 40px;
+    background-color: white;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 800;
+   
+
+}
+ 
+.deatailes .icon2{
+   width: 80px;
+    height: 40px;
+    background-color: white;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 800;
+    
+}
+.deatailes .read{
+    background-color: white;
+    height: 40px;
+   width: 100%;
+    text-align: center;
+    padding-top:2px;
+    
+    
+}
+
+
+ .pricecon{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 20px;
+   
+ }
+ .product .card:hover .deatailes {
+
+    visibility: visible;
+    bottom: 150px;
+
+ }
+ .deatailes span:hover{
+    background-color: #19c880;
+ }
+ .saleprice{
+
+    color: black;
+    font-weight: bolder;
+ }
+
+ @media(max-width:900px){
+   .container{
+    max-width: 100%;
+    flex-wrap: wrap;
+
+}
+.container .product{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: auto;
+    width: auto;
+    flex-direction: column;
+}
+ }
+
+
+ @media(max-width:550px){
+    .container{
+     max-width: 100%;
+     flex-wrap: wrap;
+ 
+ }
+
+ .container .product{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+
+}
