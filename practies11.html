@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .div{
+    width: 230px ;
+    height: 230px;
+    border-radius: 120px;
+    background-color: blue;
+
+       }
+
+       .lo{
+     width:100px;
+            display: flex;
+            justify-content: space-between;
+            align-items:center ;
+            gap:10px
+            
+       }
+       .lo li{
+        list-style: none;
+        margin-left: -30px;
+       }
+       .btn{
+        background-color: antiquewhite;
+        color: black;
+        padding: 10px;
+        width: 120px;
+        border-radius: 10px;
+        margin-top: 10px;
+        
+       }
+    </style>
+</head>
+<body>
+  <center>
+<input type="text" id="id">&nbsp; &nbsp;<button onclick="add()"> Add</button>
+
+<section id="section">
+
+
+</section>
+
+
+
+</center>
+    <script>
+
+      function item(){
+
+      var saaz= JSON.parse(localStorage.getItem("list"))
+       return  saaz
+
+      }
+      
+    
+      let arry= item() || []
+       console.log(arry)
+let  values = document.getElementById("id")
+let section=document.getElementById("section")
+
+  function add(){
+       
+       
+     
+
+
+
+
+
+
+
+
+
+
+
+
+    let text=values.value
+    if(!arry.includes(text)){
+    
+    values.value=""
+        arry.push(text)
+      let saveArry=[...new Set(arry)]
+       // console.log(saveArry)
+  var li = document.createElement("div")
+      li.classList.add("lo")
+     li.innerHTML=`<li> ${text} </li><button class="btn" onclick='hello()'> Delete</button> `
+     section.appendChild(li)
+     localStorage.setItem("list", JSON.stringify(saveArry))
+  }
+  }
+  add()
+ 
+    
+  
+      function arryData(){
+
+     arry.forEach((ele)=>{
+
+      show(ele)
+
+     })
+
+      }
+      arryData()
+       function show(n){
+
+        var li = document.createElement("div")
+      li.classList.add("lo")
+     li.innerHTML=`<li> ${n} </li><button class="btn" onclick="hello(this)""> Delete</button> `
+     section.appendChild(li)
+     
+
+
+       }
+    function Remove(e){
+   let ele=e.target
+    console.log(ele.)
+
+    }
+       section.addEventListener("click", function(e){
+          Remove(e)
+       })
+  </script>
+</body>
+</html>

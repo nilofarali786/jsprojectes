@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+   
+   .main{
+      width: 80%;
+      background-image:url("https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?cs=srgb&dl=pexels-pixabay-531880.jpg&fm=jpg") ;
+      height: 60vh;
+      margin: 20px auto;
+      color: aliceblue;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+   }
+.main .dig{
+  text-align: center;
+  font-size: 70px;
+  margin-top: 70px;
+  
+}
+.button{
+     
+    gap:10px;
+    margin-top:40px;
+    margin-left: 330px;
+    
+  
+}
+.button button{
+  width: 120px;
+  color: white;
+  background-color: black;
+  padding: 12px;
+}
+  </style>
+</head>
+<body>
+  <div class="main">
+  <div class="dig">
+    <span id="h">00:</span>
+    <span id="min">00:</span>
+    <span id="sec">00:</span>
+  </div>
+   <div class="button">
+   <button onclick="stop()"> STOP</button> 
+   <button onclick="start()">START</button>
+   <button onclick="res()">RESET</button>
+   </div>
+
+  </div>
+  <script>
+   let clock=document.querySelector("#clock")
+   let hours=document.getElementById("h")
+   let minuts=document.getElementById("min")
+   let second=document.getElementById("sec")
+   console.log(clock)
+     var demo
+     timer=true
+   let sec=0
+   let min=0
+   let h=0
+   function  clo(){
+
+     
+         sec++
+        
+         if(sec==60){
+         
+             sec=0
+             
+             min++
+            
+             if(min==60){
+             
+              min=0
+              h++
+              
+             }
+            }
+          
+             let a=sec<10?"0"+sec:sec
+             let b=min<10?"0"+min:min
+             let c=min<10?"0"+h:h
+            second.innerText=a
+            minuts.innerText=b 
+            hours.innerText=c
+        
+        
+
+
+     }
+      
+     
+      
+     
+
+   
+     
+   function start(){
+
+      demo=(setInterval(clo,1000))
+
+   }
+
+   function res(){
+    second.innerHTML="00"
+          minuts.innerHTML="00" 
+         hours.innerHTML="00"
+        
+
+   }
+   res()
+    function stop(){
+
+      clearInterval(demo)
+    }
+  
+  </script>
+  
+</body>
+</html>

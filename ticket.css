@@ -1,0 +1,99 @@
+.main{
+
+    background: linear-gradient(to left ,blue ,skyblue);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px
+}
+.tekit{
+    z-index: 4;
+    width: 500px;
+    height: 70vh;
+    background-color: aliceblue;
+      
+}
+.tekit h1{
+
+
+    text-align: center;
+}
+.seat{
+    width: 98%;
+    background-color: rgb(221, 232, 232);
+    display: flex;
+    align-items: center;
+    margin:0 4px;
+    border-radius: 2px;
+    justify-content: center;
+
+}
+.status{
+
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:40px;
+    background-color: rgb(221, 232, 232); 
+    padding: 10px;
+    position: relative;
+}
+.item{
+
+    text-align: center;
+    text-transform: uppercase;
+    position: relative
+    
+    ;
+}
+.item::before{
+    content: '';
+    position: absolute;
+    top :50%;
+   width: 10px;
+   height: 10px;
+   border: 1px solid black;
+   left: -20px;
+   transform: translate(0,-50%);
+   border-radius: 1px;
+
+
+
+
+}
+.item:nth-child(2)::before{
+
+    background-color: rgb(212, 212, 244);
+}
+
+.item:nth-child(3)::before{
+
+    background-color: rgb(22, 161, 254);
+}
+.st{
+   width: 12px;
+   height: 12px;
+   background-color: antiquewhite;
+   border: 2px solid black;
+   gap:10px
+
+}
+.row{
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: repeat(6,1fr);
+    gap:10px;
+    flex-direction: row;
+    padding: 7px;
+    margin: auto 20px;
+}
+.sold{
+    background-color: rgb(60, 12, 216);
+}
+   .av{
+
+
+    background-color: black;
+}

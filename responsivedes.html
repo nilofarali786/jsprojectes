@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+
+        background-color: rgb(252, 252, 243);
+    }
+#form{
+    width: 400px;
+    height: 500px;
+    margin: auto;
+    background-color:rgb(248, 172, 172);
+    margin-top: -140px;
+}
+h1{
+    text-align: center;
+}
+#msg{
+    color:white;
+}
+.selectcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: brown;
+    width: 300px;
+    height: 100px;
+    padding: 0px 50px;
+    gap:6px;
+}
+#btn{
+    background-color: aliceblue;
+    color: black;
+    border-style: none;
+    width: 170px;
+    padding: 5px;
+}
+    </style>
+</head>
+<body>
+    <div class="selectcontainer">
+    <select id="sel">
+        <option value="none">Please choose the option</option>
+      <option value="input">Input</option>
+      <option value="select"> select</option>
+      <option value="textarea">TextArea</option>
+      <option></option>
+
+    </select>
+    <div id="msg"></div>
+
+    <div id="sel1"></div>
+    <button id="btn"  onclick="add()" >Add</button>
+</div>
+    <div id="form">
+      <h1>The DayamicForm</h1>
+      <hr>
+
+
+
+
+    </div>
+      
+
+        </div>
+    </div>
+    <script src="./rep.js">
+        
+      
+        
+    </script>
+</body>
+</html>

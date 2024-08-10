@@ -1,0 +1,32 @@
+#quiz{
+max-width: 80%;
+margin: auto;
+background-color: azure;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    box-shadow: 0  0 px;
+    position: relative;
+    height: 50vh;
+}
+#quiz ul {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ flex-direction: column;
+gap:5px
+}
+ul li{
+    list-style: none;
+    
+}
+ul li {
+    display: flex;
+    width: 260px;
+    height: 40px;
+    border: 1px solid black;
+    align-items: center;
+    gap:10px;99]WW2
+    border-radius: 18px;
+    margin: 0 30px;
+}

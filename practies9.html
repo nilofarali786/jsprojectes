@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./practies.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        
+.showerr  {
+    color: red;
+}
+
+ .ep {
+
+
+color: #e77f10;
+}
+.saaz{
+    color: green;
+}
+    </style>
+</head>
+<body>
+   <div class="container">
+    <div class="heading">
+<h1> Registration Form</h1>
+    </div>
+    <form id="form">
+<div class="form-control">
+<label>Name</label>
+<input type="text" id="name">
+<i class="fa-sharp fa-solid fa-circle-check"></i>
+    <i class="fa-solid fa-circle-xmark"></i>
+<small id ="nameer" ></small>
+</div>
+<div class="form-control">
+    <label>Phone</label>
+    <input type="number" id="num">
+    <i class="fa-sharp fa-solid fa-circle-check"></i>
+    <i class="fa-solid fa-circle-xmark"></i>
+    <small id="numerror"></small>
+    </div>    
+       
+    <div class="form-control">
+        <label>Email</label>
+        <input type="email" id="email">
+        <i class="fa-sharp fa-solid fa-circle-check"></i>
+    <i class="fa-solid fa-circle-xmark"></i>
+        <small id="emailerror" ></small>
+        </div>
+
+        <div class="form-control">
+            <label>password</label>
+            <input type="text" id="password">
+            <i class="fa-sharp fa-solid fa-circle-check"></i>
+    <i class="fa-solid fa-circle-xmark"></i>
+            <small id="passerror" ></small>
+            </div>
+            <div class="form-control">
+                <label>confirm</label>
+                <input type="text" id="conpass">
+                <i class="fa-sharp fa-solid fa-circle-check"></i>
+                <i class="fa-solid fa-circle-xmark"></i>
+                <small id="conpaserr" ></small>
+                </div>
+                <input type="submit" value="submit">
+    </form>
+</div> 
+<script>
+
+
+ let form=   document.getElementById('form')
+ let name=document.getElementById("name")
+ let phone=document.getElementById("num")
+
+ let eamil=document.getElementById("email")
+let password=document.getElementById("password")
+let conpass=document.getElementById("conpass")
+
+   function showerror(input,msg){
+      let ele=document.getElementById(input)
+      console.log(ele)
+       ele.className=" ep"
+          ele.innerText=msg
+          console.log(ele)
+
+   }
+       function success(input,msg){
+     let sho=   document.getElementById(input)
+        sho.className="saaz"
+        sho.innerText=msg
+
+       }
+
+form.addEventListener("submit",function(e){
+  e.preventDefault()
+  validition()
+
+})
+
+ function IsEmail(em){
+ let symbol=em.indexOf("@")
+    if(symbol <1) return false
+    let dot=em.lastIndexOf('.')
+    if( dot<=symbol+3  ) return false
+    
+    if(dot==em.length-1) return false
+    return true
+ }
+
+function validition() {
+  let username=  name.value
+     let number= phone.value
+
+ let em=eamil.value
+    let pass=password.value
+     let conpad=conpass.value
+
+if(username.length  == 0){
+
+   showerror("nameer","cannot be black")
+} else if(username.length <=3){
+
+    showerror("nameer"," name alest 3 carcter")
+} else{
+
+     success("nameer","success ful")
+}
+ if(number.length == 0){
+
+
+    showerror("numerror","number cannot be balack")
+ }else if(number.length!=10){
+
+    showerror("numerror","number upto ten digites") 
+ }else{
+
+    success("numerror","success ful")
+}
+  if(em.length == 0){
+
+    showerror("emailerror","email feild cannot be balck")
+  } else if(!IsEmail(em)){
+
+    showerror("emailerror","email feild is not valid")
+  }else{
+    success("emailerror","success ful")
+  }
+  if(pass.length == 0){
+    showerror("passerror","password feild cannot blank")
+}else if(password.length >=5 && password.length <=10){
+     showerror("passerror","passwrd must upto 5 chareter")
+  } else{
+
+    success("passerror","success ful")
+}
+  
+      if(conpad == ""){
+
+        showerror("conpaserr","confirmpassword cannot be balnk")
+      }
+      else if(pass!= conpad){
+
+        showerror("conpaserr","confirmpassword cannot match password")
+    } else{
+        success("conpaserr","success ful")
+    }
+
+}
+</script>
+
+  
+</body>
+</html>

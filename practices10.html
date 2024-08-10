@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./ticket.css">
+</head>
+<body>
+  <div class="main">
+    <select id="sel">
+<option>250</option>
+<option>350</option>
+<option>450</option>
+    </select>
+<div class="tekit">
+    <h1>  Dil</h1> 
+
+ <div class="seat">
+   <div class="status">
+    <div class="item">Avaialbal</div>
+    <div class="item">Booked</div>
+    <div class="item">selected</div>
+   </div>
+  </div>
+  <div id="container">
+   <div class="row">
+    <div class="st"></div>
+    <div class="st"></div>
+    <div class="st sold"></div>
+    <div class="st"></div>
+    <div class="st"></div>
+    <div class="st"></div>
+    <div class="st"></div>
+    <div class="st"></div>
+   
+
+   
+    <div class="st"></div>
+    <div class="st sold"></div>
+    <div class="st"></div>
+    <div class="st"></div>
+    <div class="st"></div>
+    <div class="st"></div>
+    <div class="st"></div>
+    <div class="st"></div>
+   
+
+
+   
+    <div class="st"></div>
+    <div class="st"></div>
+    <div class="st"></div>
+    <div class="st"></div>
+    <div class="st"></div>
+    <div class="st"></div>
+    <div class="st"></div>
+    <div class="st"></div>
+   
+
+  
+    <div class="st"></div>
+    <div class="st"></div>
+    <div class="st sold"></div>
+    <div class="st"></div>
+    <div class="st"></div>
+    <div class="st"></div>
+    <div class="st"></div>
+    <div class="st"></div>
+   
+
+   
+    <div class="st sold"></div>
+    <div class="st sold"></div>
+    <div class="st"></div>
+    <div class="st sold"></div>
+    <div class="st"></div>
+    <div class="st"></div>
+    <div class="st"></div>
+    <div class="st"></div>
+   
+  
+    <div class="st"></div>
+    <div class="st"></div>
+    <div class="st"></div>
+    <div class="st sold"></div>
+    <div class="st  sold"></div>
+    <div class="st"></div>
+    <div class="st"></div>
+    <div class="st"></div>
+   </div>
+  </div>
+   <div>
+    <p>total seat <span id="count"></span> total price<span id="total"></span> </p>
+  </div>
+</div>
+
+  </div>
+   
+   <script>
+ let seat=  document.querySelectorAll(".row .st:not(.sold)")
+ 
+ 
+ let container=document.getElementById("container")
+ //console.log(container)
+ 
+ 
+ //console.log(seat)
+  let count=document.getElementById("count")
+  let total=document.getElementById("total")
+ // console.log(count,total)
+ var status=true
+let num=0
+
+ let sele= document.getElementById("sel")
+ let value=+sele.value
+   //  console .log(value)
+ sele.addEventListener("change",
+  function(e){
+  let  value=parseInt(e.target.value)
+  saveData(e.target.selectedIndex,e.target.value)
+  }
+
+   
+
+
+ )
+
+     function saveData(index,value){
+
+
+      localStorage.setItem("selectIndex" ,index )
+      localStorage.setItem("selectedvalue" ,value)
+     }
+
+
+    seat.forEach((st,index)=>{
+        
+    
+      st.addEventListener("click",()=>{
+      
+if(status){
+  
+        st.classList.toggle("av")?num++:num--
+          
+        localStorage.setItem("seat",JSON.stringify(st))
+          updateseat()
+        
+        
+} 
+      })
+           
+            
+        
+   
+ })
+
+  var len=0
+   function updateseat(){
+    let seats =document.querySelectorAll(".row .st:not(.sold) .av")
+
+   console.log(seats)
+      // console.log( st,index)
+
+          
+
+   
+        
+   count.innerHTML=num
+   total.innerHTML=num*value
+         
+   }
+  
+  
+    </script>
+</body>
+</html>

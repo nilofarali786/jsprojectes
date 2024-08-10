@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+let arry=[2,5,3,6,8]
+     
+  let mid=parseInt((arry.length/2))
+             console.log(length)
+
+ function MidVal(ary){
+        ary.sort((a,b)=>a-b)
+     
+        if(ary.length%2==0){
+
+          return ary[mid]   + ary[mid -1]/2
+
+        }else{
+            return ary[mid]
+        }
+
+
+
+
+ }
+    var kasif= MidVal(arry)
+    console.log(kasif)
+
+</script>
+</body>
+</html>
